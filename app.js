@@ -25,6 +25,6 @@ app.use(home);
 app.use(add);
 app.use(blog);
 
-app.listen(port,"127.0.0.1",()=>{
+app.listen(port,()=>{
     console.log(`server Listen port ${port}:`);
 });
