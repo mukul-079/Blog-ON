@@ -3,8 +3,8 @@ const mongoose=require('mongoose')
 const home=require('./routes/index');
 const add=require('./routes/add');
 const blog=require('./routes/blog');
-
 const app=express();
+const port= process.env.PORT || 8000;
 
 mongoose.connect("mongodb://localhost:27017/blog_app",{
     useNewUrlParser: true,
@@ -25,6 +25,6 @@ app.use(home);
 app.use(add);
 app.use(blog);
 
-app.listen(8000,"127.0.0.1",()=>{
-    console.log("server Listen port 8000:");
+app.listen(port,"127.0.0.1",()=>{
+    console.log(`server Listen port ${port}:`);
 });
